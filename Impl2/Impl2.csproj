@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{678C6E71-2933-42AD-8831-0D0AB6458C5A}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Model</RootNamespace>
-    <AssemblyName>反射程序集练习</AssemblyName>
+    <ProjectGuid>{B9DD485E-6DC0-4CC1-859F-844A21A49876}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Impl2</RootNamespace>
+    <AssemblyName>Impl2</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,28 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="StudentImpl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TeacherImpl.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Impl1\Impl1.csproj">
-      <Project>{35176bf7-fccd-4fae-826c-afe14ae37d44}</Project>
-      <Name>Impl1</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Impl2\Impl2.csproj">
-      <Project>{b9dd485e-6dc0-4cc1-859f-844a21a49876}</Project>
-      <Name>Impl2</Name>
-    </ProjectReference>
     <ProjectReference Include="..\InterFaceImpl\InterFaceImpl.csproj">
       <Project>{9650a8cf-8142-4e40-afef-c9a37f9102ae}</Project>
       <Name>InterFaceImpl</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ObjectFactory\ObjectFactory.csproj">
-      <Project>{765dd458-e5ec-4c91-9744-d64ca4a364a0}</Project>
-      <Name>ObjectFactory</Name>
     </ProjectReference>
     <ProjectReference Include="..\OtherProject\OtherProject.csproj">
       <Project>{6976049f-fac1-49f8-a5f6-e3e225807516}</Project>
